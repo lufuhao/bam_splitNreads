@@ -8,9 +8,9 @@ use constant USAGE=><<EOH;
 
 SYNOPSIS:
 
-	perl $0 xx.bam |  | samtools calmd - xx.reference.fa | samtools sort -o - xx.sort.bam
+	perl $0 xx.bam | samtools calmd - xx.reference.fa | samtools sort -o - xx.sort.bam
 	
-Version: LUFUHAO20150407
+Version: LUFUHAO20180405
 
 Requirements:
 	Programs: Perl
