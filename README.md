@@ -1,13 +1,16 @@
-bam_splitNreads.pl
+#bam_splitNreads.pl
 
-SYNOPSIS:
+##SYNOPSIS:
+
 
 	$samtools view -h xx.bam | perl $0 | samtools calmd - xx.reference.fa | samtools sort -o - xx.sort.bam
-	
-Requirements:
+
+##Requirements:
+
 	Programs: Perl, samtools
 
-Descriptions:
+##Descriptions:
+
 	Split CIGAR containing N into separate parts, fields affected:
 		FLAG: complementary aplignment will be with 0x800 flag
 		POS:  base on CIGAR
@@ -21,12 +24,17 @@ Descriptions:
 		Set \$includingNlen=1 if need to include N length in new CIGAR
 		output in sam format
 
-Example:
+##Example:
+
 	bam_splitNreads.pl xx.bam | samtools calmd -Su - 1AL_v2-ab-k71-contigs.fa.longerthan_200.fa | samtools sort - xx.calmd.st3
 
-Author:
+##Author:
 	Fu-Hao Lu
 	Post-Doctoral Scientist in Micheal Bevan laboratory
 	Cell and Developmental Department, John Innes Centre
 	Norwich NR4 7UH, United Kingdom
 	E-mail: Fu-Hao.Lu\@jic.ac.uk
+
+##Copyright
+
+Copyright (c) 2015-2018 Fu-Hao Lu
